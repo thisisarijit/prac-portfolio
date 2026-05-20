@@ -16,12 +16,12 @@ const ThemeToggle = () => {
       localStorage.setItem("theme", "light");
     }
   }, []);
-
+  
   const toggleTheme = () => {
     if (isDarkMode) {
-      setIsDarkMode(false);
       localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
+      setIsDarkMode(false);
     } else {
       document.documentElement.classList.add("dark");
       setIsDarkMode(true);
@@ -31,7 +31,7 @@ const ThemeToggle = () => {
 
   return (
     <button onClick={toggleTheme} className={cn("fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-      "focus:outline-hidden"
+      "focus:outline-hidden cursor-pointer "
     )}>
       {isDarkMode ? (
         <Sun className="h-6 w-6 text-yellow-300" />
