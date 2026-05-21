@@ -33,6 +33,7 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-around ">
+        {/* Logo */}
         <a
           className="text-xl font-bold text-primary flex items-center "
           href="#hero"
@@ -57,9 +58,10 @@ const Navbar = () => {
         </div>
 
         {/* mobile version */}
-        <button onClick={() => setIsMenuOpen((prev) => !prev)}
-        className="md:hidden p-2 text-foreground z-50"
-        aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+        <button
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          className="md:hidden p-2 text-foreground z-50"
+          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
