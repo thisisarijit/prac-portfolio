@@ -61,7 +61,7 @@ const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, key) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground  ">
+                    <span key = {key} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground  ">
                       {tag}
                     </span>
                   ))}
